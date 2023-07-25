@@ -29,7 +29,7 @@ const Logo = () => {
 
   return (
     <Typography className={classes.logo}>
-      <span style={{ fontFamily: "monospace" }}>Snippetpia;</span>
+      <span style={{ fontFamily: "monospace" }}>Snippetopia;</span>
    
     </Typography>
   );

@@ -97,7 +97,6 @@ const Post = ({ post, postId }) => {
   const classes = useStyles();
   const subheader = `Created ${moment
     .utc(createdAt)
-    .subtract(`330`, `minute`)
     .fromNow()}`;
   const descriptionCutter = description.slice(0, 35);
   const descToShow = descriptionCutter + "...";

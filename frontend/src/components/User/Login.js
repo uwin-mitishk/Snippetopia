@@ -68,7 +68,7 @@ const Login = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(login(state.email, state.password));
+    if(state.email!=='' && state.password!=='') dispatch(login(state.email, state.password));
   };
   return (
     <Grid container component="main" className={classes.root}>

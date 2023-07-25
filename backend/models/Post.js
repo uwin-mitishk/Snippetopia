@@ -10,9 +10,11 @@ const PostSchema = mongoose.Schema({
     default: () => {
       const d = new Date();
       const utc = d.getTime() + d.getTimezoneOffset() * 60000;
-      const nd = new Date(utc + 3600000 * +5.5);
-      var ist = nd.toISOString();
-      return ist;
+      const estOffset = -4 * 3600000; // UTC-4 (EST) offset in milliseconds
+      const estTimeInMilliseconds = utc + estOffset;
+      const estDate = new Date(estTimeInMilliseconds);
+      const estISOString = estDate.toISOString();
+      return estISOString;
     },
   },
   user: {
